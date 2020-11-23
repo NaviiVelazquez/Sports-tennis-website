@@ -21,12 +21,50 @@
 
   </head>
   <body>
+
+    <!-- Menú de navegación -->
+    <nav class="nav">
+        <a href="#inicio" class="logotipo">Aztec</a>
+        <ul id="menu">
+            <li data-menuanchor="inicio" class="active">
+                <a href="#inicio">
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li data-menuanchor="productos">
+                <a href="#productos">
+                    <span>Productos</span>
+                </a>
+            </li>
+            <li data-menuanchor="contacto">
+                <a href="#contacto">
+                    <span>Contacto</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     
+
     <!-- Estructura HTML requerida para FullPage.js -->
     <main id="fullpage">
-        <header class="section">
-            <h1>header</h1>
+        <!-- Sección Header -->
+        <header id="header" class="section">
+            <div class="contenedor-titulo">
+                <h1 class="titulo">
+                    <span class="texto-naranja">Aztec</span>
+                    <span class="texto-blanco">m-viper</span>
+                </h1>
+                <p class="texto-blanco">Nuevo modelo para correr</p>
+            </div>
+            <div class="contenedor-icono">
+                <p>
+                    <a href="#productos" class="texto-blanco">
+                        <i class="fas fa-chevron-circle-down fa-2x"></i>
+                    </a>
+                </p>
+            </div>
         </header>
+
         <section class="section">
             <h1>productos</h1>
         </section>
