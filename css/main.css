@@ -40,6 +40,30 @@ h1, h2, h3, h4, h5, h6 {
     color: orange;
 }
 
+.fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #212121 transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 3%;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #212121;
+}
+
+/* ******************************************* Animaciones ******************************************* */
+
+@keyframes bajar-subir {
+    0% { transform: translateY(20px); }    
+    25% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
 /* ********************************************** Header ********************************************** */
 
 .nav {
@@ -60,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-size: 19px;
-    color: #c2c2c2;
+    color: #b1b1b1;
     transition: .5s ease;
 }
 
@@ -78,9 +102,14 @@ h1, h2, h3, h4, h5, h6 {
     color: orange;
 }
 
+#menu li a i {
+    margin-right: 0.25rem;
+}
+
 #header {
-    background: url('../img/5.jpg');
+    background: url('../img/4.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 #header .contenedor-titulo {
@@ -102,10 +131,53 @@ h1, h2, h3, h4, h5, h6 {
     animation: bajar-subir 1s ease infinite;
 }
 
-/* ******************************************* Animaciones ******************************************* */
+/* ******************************************** Productos ******************************************** */
 
-@keyframes bajar-subir {
-    0% { transform: translateY(20px); }    
-    25% { transform: translateY(0); }
-    100% { transform: translateY(20px); }
+#catalogo article {
+    background-position: center;
+    background-size: cover;
+}
+
+#catalogo article:nth-child(1) {
+    background-image: url('../img/1.jpg');
+}
+
+#catalogo article:nth-child(2) {
+    background-image: url('../img/2.png');
+}
+
+#catalogo article:nth-child(3) {
+    background-image: url('../img/3.jpg');
+}
+
+#catalogo .informacion-producto {
+    margin: 0 30px;
+}
+
+#catalogo .informacion-producto::before {
+    content: "";
+    height: 55px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+
+#catalogo .modelo {
+    font-size: 45px;
+}
+
+#catalogo .descripcion {
+    font-size: 22px;
+}
+
+#catalogo .precio {
+    font-size: 25px;
+}
+
+#catalogo .precio::before {
+    content: "$";
+    display: inline-block;
 }
