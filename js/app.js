@@ -23,6 +23,21 @@ const seccionesPagina = new fullpage('#fullpage', {
     // ──────────────────────────────────────────────────
 	//   :::::: Secciones
 	// ──────────────────────────────────────────────────
-    sectionsColor : ['#fffffe', '#fffffe', '#fffffe'], // Color de fondo de cada seccion.
+    sectionsColor : ['#fffffe', '#fffffe', '#eeeeee'], // Color de fondo de cada seccion.
     verticalCentered: true, // Si alineara de forma vertical los contenidos de cada seccion.
+
+    // ──────────────────────────────────────────────────
+	//   :::::: Slides
+	// ──────────────────────────────────────────────────
+    controlArrows: true, // Flechas del slide
+    slidesNavigation: false, // Indicadores del slide
+
+    // ──────────────────────────────────────────────────
+	//   :::::: Animaciones (Callbacks de FullPage.js)
+	// ──────────────────────────────────────────────────
+	afterLoad: function(origin, destination) {
+        if (destination.anchor == 'contacto') {
+            document.querySelector('#footer').querySelector('h2').style.opacity = 1;
+        }
+    }
 });
