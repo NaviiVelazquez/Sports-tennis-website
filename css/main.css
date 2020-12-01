@@ -1,21 +1,25 @@
 /* **************************************** Estilos generales **************************************** */
 
+/* Todos los elementos */
 * {
     box-sizing: border-box;
     margin: 0; 
     padding: 0;
 }
 
+/* El cuerpo de la pagina */
 body { 
     font-family: 'Lato', sans-serif;
     font-size: 18px;
 }
 
+/* Etiquetas de títulos */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-bottom: 0;
 }
 
+/* Estilos del texto */
 .texto-naranja {
     font-weight: 300;
     color: orange;
@@ -32,18 +36,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* *********************************** Clases generales fullpage JS *********************************** */
 
+/* Indicadores laterales derechos */
 #fp-nav ul li a span {
     background: orange;
 }
 
+/* Indicadores laterales derechos, su texto */
 #fp-nav ul li .fp-tooltip {
     color: orange;
 }
 
+/* Posición de flechas para cambiar de producto */
 .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
     top: 95%;
 }
 
+/* Estilo de flechas para cambiar de producto  */
 .fp-controlArrow.fp-prev {
     left: 80%;
     border-width: 20px 20px 20px 0;
@@ -58,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ******************************************* Animaciones ******************************************* */
 
+/* Animación del botón ubicado en header */
 @keyframes bajar-subir {
     0% { transform: translateY(20px); }    
     25% { transform: translateY(0); }
@@ -66,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ********************************************** Header ********************************************** */
 
+/* Barra de navegación  */
 .nav {
     position: fixed;
     display: flex;
@@ -77,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 20px;
 }
 
+/* Elementos de barra de navegación  */
 .nav li, .nav a {
     display: inline-block;
     margin: 10px;
@@ -88,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: .5s ease;
 }
 
+/* Estilo de las opciones del menú  */
 #menu li.active {
     border-bottom: 2px solid orange;
 }
@@ -106,12 +118,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0.25rem;
 }
 
+/* Fondo del header  */
 #header {
     background: url('../img/4.jpg');
     background-size: cover;
     background-position: center;
 }
 
+/* Estilos de los elementos del header */
 #header .contenedor-titulo {
     text-align: center;
     position: relative;
@@ -133,11 +147,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ******************************************** Productos ******************************************** */
 
+/* Estilos de las imágenes de productos  */
 #catalogo article {
     background-position: center;
     background-size: cover;
 }
 
+/* Productos */
 #catalogo article:nth-child(1) {
     background-image: url('../img/1.jpg');
 }
@@ -150,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../img/3.jpg');
 }
 
+/* Estilos de elementos título, descripción y precio de los productos */
 #catalogo .informacion-producto {
     margin: 0 30px;
 }
@@ -184,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ********************************************* Contacto ********************************************* */
 
+/* Estilo del texto del título en footer */
 #footer .texto-naranja {
     text-transform: uppercase;
     font-size: 60px;
@@ -197,10 +215,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: 1s ease all;
 }
 
+/* Estilo de los iconos en footer */
 #footer .redes-sociales {
     display: flex;
     justify-content: center;
     margin: 0;
+    font-size: 50px;
 }
 
 #footer .redes-sociales a {
@@ -216,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 20px;
 }
 
+/* Colores y estilos de los iconos de redes sociales */
 #footer .facebook i {
     color: #3b5998;
 }
@@ -252,6 +273,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
 
+/* Estilos del texto del autor */
 #autor {
     position: absolute;
     z-index: 80;    
@@ -280,4 +302,116 @@ h1, h2, h3, h4, h5, h6 {
 
 #autor .estilo-text-autor:hover {
     border-bottom: 2px solid orange;
+}
+
+/* ***************************************** Modo responsivo ***************************************** */
+
+/* Responsivo para pantallas medianas */
+@media screen and (max-width: 768px) {
+    #menu li a, #menu li.active a {
+        font-size: 18px;
+    }
+
+    #catalogo .modelo {
+        font-size: 40px;
+    }
+
+    #catalogo .precio {
+        font-size: 23px;
+    }
+
+    #footer h2 {
+        font-size: 15px;
+    }
+
+    #footer .redes-sociales {
+        font-size: 30px;
+    }
+
+    #footer .redes-sociales a {
+        width: 80px;
+        height: 80px;
+    }
+
+    #footer .texto-naranja {
+        font-size: 40px;
+    }
+
+    #autor .texto-copyright {
+        font-size: 16px;
+    }
+
+    #autor .estilo-text-autor {
+        font-size: 16px;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+    #header .titulo {
+        font-size: 60px;
+    }
+
+    #catalogo .informacion-producto {
+        position: absolute;
+        top: 70%;
+    }
+}
+
+/* Responsivo para pantallas extra pequeñas */
+@media screen and (max-width: 450px) {
+    .nav {
+        display: block;
+        text-align: center;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu li a, #menu li.active a {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    #header .titulo {
+        font-size: 45px;
+    }
+
+    #catalogo .modelo {
+        font-size: 30px;
+    }
+
+    #catalogo .precio {
+        font-size: 20px;
+    }
+
+    #catalogo .descripcion {
+        font-size: 20px;
+    }
+
+    #footer .texto-naranja {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    #footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    #autor .texto-copyright {
+        font-size: 12px;
+    }
+
+    #autor .estilo-text-autor {
+        font-size: 12px;
+    }
 }
